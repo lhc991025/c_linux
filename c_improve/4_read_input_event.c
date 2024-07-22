@@ -10,15 +10,15 @@
 int main(int argc, char *argv[])
 {
     struct input_event in_ev = {0};
-    in fd = -1;
-    //校验传参
+    int fd = -1;
+    //鏍￠獙浼犲弬
     if(2 != argc){
         fprintf(stderr, "usage: %s <inuput-dev> /n", argv[0]);
         exit(-1);
     }
 
-    //打开文件
-    if(0 > (fd = open(argv[1], O_RDONLY)){
+    //鎵撳紑鏂囦欢
+    if(0 > (fd = open(argv[1], O_RDONLY))){
         perror("open error");
         exit(-1);
     }
